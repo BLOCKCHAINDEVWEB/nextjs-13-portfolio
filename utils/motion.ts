@@ -124,6 +124,7 @@ export const fadeIn = (
 export const variants = (direction: string): Variants => ({
   hidden: {
     x: direction === 'left' ? '-100%' : '100%',
+    y: direction === 'up' ? '-20%' : '20%',
     rotate: 120,
   },
   show: {

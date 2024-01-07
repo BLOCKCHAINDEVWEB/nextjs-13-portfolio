@@ -137,8 +137,8 @@ export const realizationsWebsite = {
 
 export const newFeaturesContent = {
   fr: {
-    typingText: '| Mon rôle précédent',
-    title: `Qu'en est-il de mon travail précédent?`,
+    typingText: '| Mon rôle actuels',
+    title: `Qu'en est-il de mon travail actuels?`,
   },
   en: {
     typingText: '| My previous role"',

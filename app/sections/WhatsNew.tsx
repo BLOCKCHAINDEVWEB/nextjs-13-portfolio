@@ -40,11 +40,20 @@ export default function WhatsNew({ lang }: { lang: string }) {
 
         <motion.div
           variants={variants('right')}
-          className="flex-1 flex justify-center items-center"
+          className="flex-1 flex flex-col justify-center items-center"
         >
           <Link href="https://dashboard.feature.sh/" target="_blank">
             <Image
               src="/img/dashboard_capture.png"
+              alt="get-started"
+              className="w-[90%] h-[90%] object-contain"
+              width={500}
+              height={500}
+            />
+          </Link>
+          <Link href="https://jobs.feature.sh/">
+            <Image
+              src="/img/jobboard-capture.png"
               alt="get-started"
               className="w-[90%] h-[90%] object-contain"
               width={500}

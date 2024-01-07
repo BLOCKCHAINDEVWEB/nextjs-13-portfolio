@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
+import { useQRCode } from 'next-qrcode'
 
 import { getStartedContent, startingFeatures } from '@/constants'
 import TypingText from '@/components/TypingText'
@@ -12,6 +13,8 @@ import StartSteps from '@/components/StartSteps'
 import { staggerContainer, fadeIn } from '@/utils/motion'
 
 export default function GetStarted({ lang }: { lang: string }) {
+  const { Canvas } = useQRCode()
+
   const { typingText, title, linkText } =
     lang === 'en' ? getStartedContent.en : getStartedContent.fr
 
@@ -69,12 +72,20 @@ export default function GetStarted({ lang }: { lang: string }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Image
-                  src="/img/qr-code-cv-dev_120w.svg"
-                  alt="Web and Mobile Web Developer Resume"
-                  className="w-[120px] h-[120px]"
-                  width={500}
-                  height={500}
+                <Canvas
+                  text={
+                    'https://storage.googleapis.com/cv-pwahost/CV_DEV_Y.Goalen.pdf'
+                  }
+                  options={{
+                    errorCorrectionLevel: 'M',
+                    margin: 3,
+                    scale: 4,
+                    width: 120,
+                    color: {
+                      dark: '#FFF',
+                      light: '#000',
+                    },
+                  }}
                 />
               </a>
             </div>

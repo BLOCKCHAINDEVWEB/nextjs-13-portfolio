@@ -42,7 +42,7 @@ export default function WhatsNew({ lang }: { lang: string }) {
           variants={variants('right')}
           className="flex-1 flex justify-center items-center"
         >
-          <Link href="https://dashboard.feature.sh/">
+          <Link href="https://dashboard.feature.sh/" target="_blank">
             <Image
               src="/img/dashboard_capture.png"
               alt="get-started"
